@@ -54,7 +54,7 @@ static const char *brightnessdown[] = {"sudo", "xbacklight", "-dec", "5", NULL }
 ///tagging */
 
 
-static const char *tags[] = { "   ", " 󰍳  ", " 󰇥  ", " 󱢢  ", "   " };
+static const char *tags[] = { "   ", "  表 ", " 地 ", " 新 ", " 女 " };
 
 static const char *tagsel[][2] = {
 	{ "#64aefe", "#5d7082" },
