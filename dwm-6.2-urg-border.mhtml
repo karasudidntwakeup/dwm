@@ -1,0 +1,89 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://dwm.suckless.org/patches/urgentborder/dwm-6.2-urg-border.diff
+Subject: 
+Date: Wed, 13 Dec 2023 19:54:02 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--aycIGLogExN08QgI89duV5VFkK43JCDvI8rA2t1Her----"
+
+
+------MultipartBoundary--aycIGLogExN08QgI89duV5VFkK43JCDvI8rA2t1Her----
+Content-Type: text/html
+Content-ID: <frame-E8140BF9380D7ACF1799FD7F84D96AE8@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://dwm.suckless.org/patches/urgentborder/dwm-6.2-urg-border.diff
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dwindows-1252"><link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css=
+-d9894af9-6c3e-4dd2-a14d-60623ca9c12e@mhtml.blink" /><meta name=3D"color-sc=
+heme" content=3D"light dark"></head><body><pre style=3D"word-wrap: break-wo=
+rd; white-space: pre-wrap;">From f20e5593e154e7e46c3f7100bd1378c7844b5ec8 M=
+on Sep 17 00:00:00 2001
+From: Dirk Leichsenring &lt;dlei@reddott.de&gt;
+Date: Sun, 21 Jun 2020 14:00:40 +0200
+Subject: [PATCH] Make the borders of urgent windows a different color - for=
+ dwm 6.2
+
+---
+ config.def.h | 2 ++
+ dwm.c        | 7 +++++--
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 1c0b587..1cb4492 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -12,10 +12,12 @@ static const char col_gray2[]       =3D "#444444";
+ static const char col_gray3[]       =3D "#bbbbbb";
+ static const char col_gray4[]       =3D "#eeeeee";
+ static const char col_cyan[]        =3D "#005577";
++static const char col_urgborder[]   =3D "#ff0000";
+ static const char *colors[][3]      =3D {
+ 	/*               fg         bg         border   */
+ 	[SchemeNorm] =3D { col_gray3, col_gray1, col_gray2 },
+ 	[SchemeSel]  =3D { col_gray4, col_cyan,  col_cyan  },
++	[SchemeUrg]  =3D { col_gray4, col_cyan,  col_urgborder  },
+ };
+=20
+ /* tagging */
+diff --git a/dwm.c b/dwm.c
+index 4465af1..fda4013 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -59,7 +59,7 @@
+=20
+ /* enums */
+ enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
+-enum { SchemeNorm, SchemeSel }; /* color schemes */
++enum { SchemeNorm, SchemeSel, SchemeUrg }; /* color schemes */
+ enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
+        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
+@@ -2022,8 +2022,11 @@ updatewmhints(Client *c)
+ 		if (c =3D=3D selmon-&gt;sel &amp;&amp; wmh-&gt;flags &amp; XUrgencyHint)=
+ {
+ 			wmh-&gt;flags &amp;=3D ~XUrgencyHint;
+ 			XSetWMHints(dpy, c-&gt;win, wmh);
+-		} else
++		} else {
+ 			c-&gt;isurgent =3D (wmh-&gt;flags &amp; XUrgencyHint) ? 1 : 0;
++			if (c-&gt;isurgent)
++				XSetWindowBorder(dpy, c-&gt;win, scheme[SchemeUrg][ColBorder].pixel);
++		}
+ 		if (wmh-&gt;flags &amp; InputHint)
+ 			c-&gt;neverfocus =3D !wmh-&gt;input;
+ 		else
+--=20
+2.27.0
+
+</pre></body></html>
+------MultipartBoundary--aycIGLogExN08QgI89duV5VFkK43JCDvI8rA2t1Her----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-d9894af9-6c3e-4dd2-a14d-60623ca9c12e@mhtml.blink
+
+@charset "windows-1252";
+
+html > ::-webkit-scrollbar { width: 0px; height: 0px; }
+------MultipartBoundary--aycIGLogExN08QgI89duV5VFkK43JCDvI8rA2t1Her------

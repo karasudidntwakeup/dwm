@@ -1,11 +1,15 @@
 --- config.def.h
 +++ config.def.h
-@@ -56,7 +55,7 @@ static const Layout layouts[] = {
- #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
- 
- /* commands */
--static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
- static const char *termcmd[]  = { "st", NULL };
- 
- static const Key keys[] = {
+@@ -12,10 +12,12 @@ static const char col_gray2[]       =3D "#444444";
+ static const char col_gray3[]       =3D "#bbbbbb";
+ static const char col_gray4[]       =3D "#eeeeee";
+ static const char col_cyan[]        =3D "#005577";
++static const char col_urgborder[]   =3D "#ff0000";
+ static const char *colors[][3]      =3D {
+ 	/*               fg         bg         border   */
+ 	[SchemeNorm] =3D { col_gray3, col_gray1, col_gray2 },
+ 	[SchemeSel]  =3D { col_gray4, col_cyan,  col_cyan  },
++	[SchemeUrg]  =3D { col_gray4, col_cyan,  col_urgborder  },
+ };
+ 20
+ /* tagging */
