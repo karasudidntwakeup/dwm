@@ -170,6 +170,8 @@ static const Key keys[] = {
         { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
         { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
         { MODKEY|ShiftMask,             XK_w,  togglefloating, {0} },
+        { MODKEY,                       XK_s,                       spawn,
+SHCMD("telegram-desktop") },
         { 0,                            XK_Print,                   spawn,
 SHCMD("maim -s -d 1 | xclip -selection clipboard -t image/png -i") },
 
