@@ -16,8 +16,23 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = { "Cascadia Mono:size=13", "SF Arabic:size=13","JetBrains Mono:size=11"};
 static const char dmenufont[]       = "Cascadia Code:size=13";
 
+static const char norm_fg[] = "#f1f1f1";
+static const char norm_bg[] = "#191919";
+static const char norm_border[] = "#a8a8a8";
+static const char sel_fg[] = "#f1f1f1";
+static const char sel_bg[] = "#191919";
+static const char sel_border[] = "#f1f1f1";
+static const char urg_fg[] = "#f1f1f1";
+static const char urg_bg[] = "#707070";
+static const char urg_border[] = "#707070";
+static const char *colors[][3]      = {
+    /*               fg           bg         border                         */
+    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
+    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
+    [SchemeUrg] =  { urg_fg,      urg_bg,    urg_border },
+};
 
-#include "/home/karasu/.cache/wal/colors-wal-dwm.h"
+
 
 //
 
@@ -57,15 +72,15 @@ static const char *brightnessdown[] = {"sudo", "xbacklight", "-dec", "5", NULL }
 static const char *tags[] = { "   ", "  表 ", " 地 ", " 新 ", " 女 " };
 
 static const char *tagsel[][2] = {
-	{ "#64aefe", "#000000" },
-	{ "#f5ce6b", "#000000" },
-	{ "#7fa3fa", "#000000" },
-	{ "#f78baa", "#000000" },
-	{ "#7aa2f7", "#000000" },
-	{ "#f28fad", "#000000" },
-	{ "#ffffff", "#000000" },
-	{ "#7fa3fa", "#000000" },
-	{ "#64aefe", "#000000" },
+	{ "#64aefe", "#0f0f0f" },
+	{ "#f5ce6b", "#0f0f0f" },
+	{ "#7fa3fa", "#0f0f0f" },
+	{ "#f78baa", "#0f0f0f" },
+	{ "#7aa2f7", "#0f0f0f" },
+	{ "#f28fad", "#0f0f0f" },
+	{ "#ffffff", "#0f0f0f" },
+	{ "#b4aefe", "#0f0f0f" },
+	{ "#f28fad", "#0f0f0f" },
 };
 
 static const Rule rules[] = {
