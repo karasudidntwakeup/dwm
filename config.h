@@ -195,7 +195,7 @@ SHCMD("maim -s -d 1 | xclip -selection clipboard -t image/png -i") },
 
 
 
-   { 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+        { 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
         { 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
         { 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 
