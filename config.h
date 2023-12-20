@@ -18,10 +18,10 @@ static const char dmenufont[]       = "Cascadia Code:size=13";
 
 static const char norm_fg[] = "#f1f1f1";
 static const char norm_bg[] = "#191919";
-static const char norm_border[] = "#a8a8a8";
+static const char norm_border[] = "#448cf6";
 static const char sel_fg[] = "#f1f1f1";
 static const char sel_bg[] = "#191919";
-static const char sel_border[] = "#f1f1f1";
+static const char sel_border[] = "#f5ce6b";
 static const char urg_fg[] = "#f1f1f1";
 static const char urg_bg[] = "#707070";
 static const char urg_border[] = "#707070";
