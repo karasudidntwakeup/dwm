@@ -72,15 +72,15 @@ static const char *brightnessdown[] = {"sudo", "xbacklight", "-dec", "5", NULL }
 static const char *tags[] = { "   ", "  表 ", " 地 ", " 新 ", " 女 " };
 
 static const char *tagsel[][2] = {
-	{ "#64aefe", "#0f0f0f" },
-	{ "#f5ce6b", "#0f0f0f" },
-	{ "#7fa3fa", "#0f0f0f" },
-	{ "#f78baa", "#0f0f0f" },
-	{ "#7aa2f7", "#0f0f0f" },
-	{ "#f28fad", "#0f0f0f" },
-	{ "#ffffff", "#0f0f0f" },
-	{ "#b4aefe", "#0f0f0f" },
-	{ "#f28fad", "#0f0f0f" },
+	{ "#64aefe", "#191919" },
+	{ "#f5ce6b", "#191919" },
+	{ "#7fa3fa", "#191919" },
+	{ "#f78baa", "#191919" },
+	{ "#7aa2f7", "#191919" },
+	{ "#f28fad", "#191919" },
+	{ "#ffffff", "#191919" },
+	{ "#b4aefe", "#191919" },
+	{ "#f28fad", "#191919" },
 };
 
 static const Rule rules[] = {
