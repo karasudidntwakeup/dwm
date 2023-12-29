@@ -13,8 +13,8 @@ static const unsigned int gappov    = 15;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[] = { "Cascadia Mono:size=13", "SF Arabic:size=13","JetBrains Mono NerdFont:size=13"};
-static const char dmenufont[]       = "Cascadia Code:size=13";
+static const char *fonts[] = { "Cascadia Mono:size=11", "SF Arabic:size=11","JetBrains Mono NerdFont:size=11"};
+static const char dmenufont[]       = "Cascadia Code:size=11";
 
 static const char norm_fg[] = "#f1f1f1";
 static const char norm_bg[] = "#191919";
