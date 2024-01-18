@@ -72,7 +72,7 @@ static const char *brightnessdown[] = { "xbacklight", "-dec", "5", NULL };
 static const char *tags[] = { "  ", "  表 ", " 地 ", " 新 ", " 女 " };
 
 static const char *tagsel[][2] = {
-	{ "#64aefe", "#191919" },
+	{ "#ffffff", "#191919" },
 	{ "#f5ce6b", "#191919" },
 	{ "#7fa3fa", "#191919" },
 	{ "#f78baa", "#191919" },
