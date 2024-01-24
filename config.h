@@ -21,7 +21,7 @@ static const char norm_bg[] = "#191919";
 static const char norm_border[] = "#448cf6";
 static const char sel_fg[] = "#f1f1f1";
 static const char sel_bg[] = "#191919";
-static const char sel_border[] = "#f8708c";
+static const char sel_border[] = "#ee5396";
 static const char urg_fg[] = "#f1f1f1";
 static const char urg_bg[] = "#707070";
 static const char urg_border[] = "#707070";
@@ -72,15 +72,15 @@ static const char *brightnessdown[] = { "xbacklight", "-dec", "5", NULL };
 static const char *tags[] = { "  ", "  表 ", " 地 ", " 新 ", " 女 " };
 
 static const char *tagsel[][2] = {
-	{ "#ffffff", "#191919" },
+	{ "#be95ff", "#191919" },
 	{ "#f5ce6b", "#191919" },
-	{ "#7fa3fa", "#191919" },
-	{ "#f78baa", "#191919" },
+	{ "#ee5396", "#191919" },
+	{ "#ee5396", "#191919" },
 	{ "#7aa2f7", "#191919" },
-	{ "#f28fad", "#191919" },
+	{ "#ee5396", "#191919" },
 	{ "#ffffff", "#191919" },
 	{ "#b4aefe", "#191919" },
-	{ "#f28fad", "#191919" },
+	{ "#ee5396", "#191919" },
 };
 
 static const Rule rules[] = {
@@ -104,9 +104,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ "[]",      spiral },
+	{ "[@]=",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
-	{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
