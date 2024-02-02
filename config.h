@@ -64,7 +64,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "vanitygaps.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]",      spiral },
+	{ "",      spiral },
 	{ "[@]=",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
 	{ "[\\]",     dwindle },
@@ -137,7 +137,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,  togglefloating, {0} },
         { 0,                            XK_Print,                   spawn,SHCMD("maim -s -d 1 | xclip -selection clipboard -t image/png -i") },
         { MODKEY,                       XK_s,                       spawn,SHCMD("telegram-desktop") },
-        { MODKEY,                       XK_z,                       spawn,SHCMD("ungoogled-chromium") },
+        { MODKEY,                       XK_z,                       spawn,SHCMD("chromium") },
         { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
