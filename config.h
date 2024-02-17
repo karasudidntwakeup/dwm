@@ -10,8 +10,8 @@ static const unsigned int gappov    = 15;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[] = { "Cascadia Mono:size=12", "SF Arabic:size=11","JetBrains Mono NerdFont:size=10"};
-static const char dmenufont[]  = "Cascadia Code:size=11";
+static const char *fonts[] = { "Cascadia Code:size=12", "SF Arabic:size=11","JetBrains Mono NerdFont:size=10"};
+static const char dmenufont[]  = "Cascadia Code:size=12";
 static const char norm_fg[] = "#f1f1f1";
 static const char norm_bg[] = "#191919";
 static const char norm_border[] = "#448cf6";
@@ -37,7 +37,7 @@ static const char *colors[][3]      = {
  static const char *brightnessup[] = { "xbacklight", "-inc","5", NULL };
  static const char *brightnessdown[] = { "xbacklight", "-dec", "5", NULL };
 ///tagging */
- static const char *tags[] = { "  ", "  表 ", " 地 ", " 新 ", " 女 " };
+ static const char *tags[] = { "  ", "  表 ", " 地 ", " 新 ", " 女 " };
  static const char *tagsel[][2] = {
 	{ "#be95ff", "#191919" },
 	{ "#f5ce6b", "#191919" },
@@ -92,9 +92,9 @@ static const Layout layouts[] = {
 /* commands */
 static const char *filebrowsercmd[]  = { "pcmanfm", NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
+static const char *dmenucmd[] = { "dmenu_run" };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]       = { "librewolf", NULL, "librewolf" };
+static const char *browser[]       = { "firefox", NULL, "firefox" };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY,             XK_Return, spawn,          {.v = termcmd } },
@@ -135,9 +135,9 @@ static const Key keys[] = {
         { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
         { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
         { MODKEY|ShiftMask,             XK_w,  togglefloating, {0} },
-        { 0,                            XK_Print,                   spawn,SHCMD("maim -s -d 1 | xclip -selection clipboard -t image/png -i") },
+        { 0,                            XK_Print,                   spawn,SHCMD("maim -o -s -d 1 | xclip -selection clipboard -t image/png -i") },
         { MODKEY,                       XK_s,                       spawn,SHCMD("telegram-desktop") },
-        { MODKEY,                       XK_z,                       spawn,SHCMD("chromium-bin") },
+        { MODKEY,                       XK_z,                       spawn,SHCMD("ungoogled-chromium") },
         { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
