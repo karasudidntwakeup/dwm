@@ -37,7 +37,7 @@ static const char *colors[][3]      = {
  static const char *brightnessup[] = { "xbacklight", "-inc","5", NULL };
  static const char *brightnessdown[] = { "xbacklight", "-dec", "5", NULL };
 ///tagging */
- static const char *tags[] = { " ", "  表 ", " 地 ", " 新 ", " 女 " };
+ static const char *tags[] = { "  ", " 表 ", " 地 ", " 新 ", " 女 " };
  static const char *tagsel[][2] = {
 	{ "#be95ff", "#191919" },
 	{ "#f5ce6b", "#191919" },
