@@ -94,14 +94,14 @@ static const char *filebrowsercmd[]  = { "pcmanfm", NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run" };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]       = { "firefox", NULL, "firefox" };
+static const char *browser[]       = { "ungoogled-chromium", NULL, "ungoogled-chromium" };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY,             XK_Return, spawn,          {.v = termcmd } },
         { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[0] } },
         { MODKEY,                       XK_f,      spawn,       {.v = filebrowsercmd } },
         { MODKEY,                       XK_space,  spawn,          {.v = dmenucmd} },
-        { MODKEY,                       XK_c,      spawn,       {.v = browser } },
+        { MODKEY,                       XK_z,      spawn,       {.v = browser } },
         { MODKEY,                       XK_b,      togglebar,      {0} },
         { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
         { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -137,7 +137,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,  togglefloating, {0} },
         { 0,                            XK_Print,                   spawn,SHCMD("maim -o -s -d 1 | xclip -selection clipboard -t image/png -i") },
         { MODKEY,                       XK_s,                       spawn,SHCMD("telegram-desktop") },
-        { MODKEY,                       XK_z,                       spawn,SHCMD("ungoogled-chromium") },
+        { MODKEY,                       XK_c,                       spawn,SHCMD("code-oss") },
         { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
