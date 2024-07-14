@@ -29,7 +29,9 @@ static const char *colors[][3]      = {
  };
 /*sound*/
  static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+ static const char *upvol2[]   = { "/usr/bin/pactl", "set-sink-volume", "alsa_output.usb-TTGK_Technology_Co._Ltd_CX31993_384Khz_HIFI_AUDIO-00.analog-stereo", "+5%",     NULL };
  static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+ static const char *downvol2[] = { "/usr/bin/pactl", "set-sink-volume", "alsa_output.usb-TTGK_Technology_Co._Ltd_CX31993_384Khz_HIFI_AUDIO-00.analog-stereo", "-5%",     NULL };
  static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 //slock
  static const char *slockcmd[] = { "slock", NULL };
@@ -38,7 +40,7 @@ static const char *colors[][3]      = {
  static const char *brightnessdown[] = { "xbacklight", "-dec", "5", NULL };
 ///tagging */
  //static const char *tags[] = { "  ", " 表 ", " 地 ", " 新 ", " 女 " };
- static const char *tags[] = { " I ", " II ", " II ", " IV ", " V " };
+ static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
  static const char *tagsel[][2] = {
 	{ "#be95ff", "#191919" },
 	{ "#f5ce6b", "#191919" },
@@ -99,11 +101,12 @@ static const char *browser[]       = { "chromium", NULL, "chromium" };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY,             XK_Return, spawn,          {.v = termcmd } },
+        { MODKEY,                       XK_b,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/bookmarks/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)") },
         { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[0] } },
         { MODKEY,                       XK_f,      spawn,       {.v = filebrowsercmd } },
         { MODKEY,                       XK_space,  spawn,          {.v = dmenucmd} },
         { MODKEY,                       XK_z,      spawn,       {.v = browser } },
-        { MODKEY,                       XK_b,      togglebar,      {0} },
+        { MODKEY,                       XK_a,      togglebar,      {0} },
         { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
         { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
         { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -154,8 +157,10 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
         { MODKEY,                       XK_n,      spawn,               {.v = slockcmd } },
         { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+        { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = downvol2 } },
         { 0,                            XF86XK_AudioMute, spawn, {.v = mutevol } },
         { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+        { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol2   } },
         { 0,                            XF86XK_MonBrightnessUp,   spawn,                           {.v = brightnessup} },
         { 0,                            XF86XK_MonBrightnessDown, spawn,                           {.v = brightnessdown} },
         { MODKEY,                       XK_n,      spawn,               {.v = slockcmd } },
