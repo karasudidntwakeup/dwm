@@ -36,8 +36,8 @@ static const char *colors[][3]      = {
 //slock
  static const char *slockcmd[] = { "slock", NULL };
 //brightness
- static const char *brightnessup[] = { "xbacklight", "-inc","5", NULL };
- static const char *brightnessdown[] = { "xbacklight", "-dec", "5", NULL };
+ static const char *brightnessup[] = {"sudo", "xbacklight", "-inc","5", NULL };
+ static const char *brightnessdown[] = { "sudo","xbacklight", "-dec", "5", NULL };
 ///tagging */
  //static const char *tags[] = { "  ", " 表 ", " 地 ", " 新 ", " 女 " };
  static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
@@ -93,7 +93,7 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 /* commands */
-static const char *filebrowsercmd[]  = { "spf", NULL};
+static const char *filebrowsercmd[]  = { " ", NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run" };
 static const char *termcmd[]  = { "st", NULL };
@@ -141,6 +141,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,      togglefloating, {0} },
         { 0,                            XK_Print,                   spawn,SHCMD("maim -o -s -d 1 | xclip -selection clipboard -t image/png -i") },
         { MODKEY,                       XK_s,                       spawn,SHCMD("telegram-desktop") },
+        { MODKEY,                       XK_z,                       spawn,SHCMD("thorium-browser") },
         { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
