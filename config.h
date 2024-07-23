@@ -36,8 +36,8 @@ static const char *colors[][3]      = {
 //slock
  static const char *slockcmd[] = { "slock", NULL };
 //brightness
- static const char *brightnessup[] = {"sudo", "xbacklight", "-inc","5", NULL };
- static const char *brightnessdown[] = { "sudo","xbacklight", "-dec", "5", NULL };
+ static const char *brightnessup[] = {"sudo", "brillo","-q","-A","5", NULL };
+ static const char *brightnessdown[] = { "sudo","brillo","-q", "-U", "5", NULL };
 ///tagging */
  //static const char *tags[] = { "  ", " 表 ", " 地 ", " 新 ", " 女 " };
  static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
