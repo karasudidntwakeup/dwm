@@ -39,7 +39,6 @@ static const char *colors[][3]      = {
  static const char *brightnessup[] = {"sudo", "brillo","-q","-A","5", NULL };
  static const char *brightnessdown[] = { "sudo","brillo","-q", "-U", "5", NULL };
 ///tagging */
- //static const char *tags[] = { "  ", " 表 ", " 地 ", " 新 ", " 女 " };
  static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
  static const char *tagsel[][2] = {
 	{ "#be95ff", "#191919" },
