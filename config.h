@@ -12,12 +12,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = { "Recursive Mono Casual Static:size=16", "SF Arabic:size=14","Symbols Nerd Font:size=13"};
 static const char dmenufont[]  = "Recursive Mono Casual Static:size=16";
-static const char norm_fg[] = "#f5ce6b";
-static const char norm_bg[] = "#191919";
+static const char norm_fg[] = "#191919";
+static const char norm_bg[] = "#ffffff";
 static const char norm_border[] = "#448cf6";
-static const char sel_fg[] = "#f1f1f1";
-static const char sel_bg[] = "#191919";
-static const char sel_border[] = "#ee5396";
+static const char sel_fg[] = "#191919";
+static const char sel_bg[] = "#ffffff";
+static const char sel_border[] = "#191919";
 static const char urg_fg[] = "#f1f1f1";
 static const char urg_bg[] = "#707070";
 static const char urg_border[] = "#707070";
@@ -41,15 +41,15 @@ static const char *colors[][3]      = {
 ///tagging */
  static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
  static const char *tagsel[][2] = {
-	{ "#be95ff", "#191919" },
-	{ "#f5ce6b", "#191919" },
-	{ "#ee5396", "#191919" },
-	{ "#ee5396", "#191919" },
-	{ "#7aa2f7", "#191919" },
-	{ "#ee5396", "#191919" },
-	{ "#ffffff", "#191919" },
-	{ "#b4aefe", "#191919" },
-	{ "#ee5396", "#191919" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
+	{ "#191919", "#ffffff" },
  };
 static const Rule rules[] = {
 	/* xprop(1):
