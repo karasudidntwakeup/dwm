@@ -15,9 +15,9 @@ static const char dmenufont[]  = "Recursive Mono Casual Static:size=16";
 static const char norm_fg[] = "#191919";
 static const char norm_bg[] = "#ffffff";
 static const char norm_border[] = "#448cf6";
-static const char sel_fg[] = "#191919";
+static const char sel_fg[] = "#000000";
 static const char sel_bg[] = "#ffffff";
-static const char sel_border[] = "#191919";
+static const char sel_border[] = "#000000";
 static const char urg_fg[] = "#f1f1f1";
 static const char urg_bg[] = "#707070";
 static const char urg_border[] = "#707070";
@@ -41,15 +41,15 @@ static const char *colors[][3]      = {
 ///tagging */
  static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
  static const char *tagsel[][2] = {
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
-	{ "#191919", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
+	{ "#000000", "#ffffff" },
  };
 static const Rule rules[] = {
 	/* xprop(1):
@@ -96,7 +96,7 @@ static const char *filebrowsercmd[]  = { " ", NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run" };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]       = { "librewolf", NULL, "librewolf" };
+static const char *browser[]       = { "firefox", NULL, "firefox" };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY,             XK_Return, spawn,          {.v = termcmd } },
