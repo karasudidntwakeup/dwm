@@ -96,7 +96,7 @@ static const char *filebrowsercmd[]  = { " ", NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run" };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]       = { "firefox", NULL, "firefox" };
+static const char *browser[]       = { "zen-browser", NULL, "zen-browser" };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY,             XK_Return, spawn,          {.v = termcmd } },
