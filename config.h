@@ -140,7 +140,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,      togglefloating, {0} },
         { 0,                            XK_Print,                   spawn,SHCMD("maim -o -s -d 1 | xclip -selection clipboard -t image/png -i") },
         { MODKEY,                       XK_s,                       spawn,SHCMD("telegram-desktop") },
-        { MODKEY,                       XK_z,                       spawn,SHCMD("thorium-browser") },
+        { MODKEY,                       XK_z,                       spawn,SHCMD("zen-browser") },
         { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
