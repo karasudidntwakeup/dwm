@@ -96,7 +96,7 @@ static const char *filebrowsercmd[]  = { " ", NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run" };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]       = { "zen-browser", NULL, "zen-browser" };
+static const char *browser[]       = { "librewolf", NULL, "librewolf" };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
   { MODKEY,             XK_Return, spawn,          {.v = termcmd } },
@@ -140,7 +140,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,      togglefloating, {0} },
         { 0,                            XK_Print,                   spawn,SHCMD("maim -o -s -d 1 | xclip -selection clipboard -t image/png -i") },
         { MODKEY,                       XK_s,                       spawn,SHCMD("telegram-desktop") },
-        { MODKEY,                       XK_z,                       spawn,SHCMD("librewolf") },
+        { MODKEY,                       XK_z,                       spawn,SHCMD("zen-browser") },
         { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
