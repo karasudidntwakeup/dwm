@@ -11,7 +11,7 @@ static       int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = { "Recursive Mono Casual Static:size=15", "SF Arabic:size=14","Symbols Nerd Font:size=14"};
-static const char dmenufont[]  = "Recursive Mono Casual Static:size=16";
+static const char dmenufont[]  = "Recursive Mono Casual Static:size=15";
 static const char norm_fg[] = "#191919";
 static const char norm_bg[] = "#ffffff";
 static const char norm_border[] = "#448cf6";

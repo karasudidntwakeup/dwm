@@ -801,7 +801,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 					char buf[8];
 					memcpy(buf, (char*)text+i+1, 7);
 					buf[7] = '\0';
-					drw_clr_create(drw, &drw->scheme[ColBg], buf);
+					drw_clr_create(drw, &drw->scheme[ColBg],  "#ffffff");
 					i += 7;
 				} else if (text[i] == 'd') {
 					drw->scheme[ColFg] = scheme[SchemeNorm][ColFg];
@@ -1751,7 +1751,7 @@ setup(void)
        scheme[LENGTH(colors)] = drw_scm_create(drw, colors[0], 3);
 
 	for (i = 0; i < LENGTH(colors); i++)
-		scheme[i] = drw_scm_create(drw, colors[i], 3);
+     scheme[i] = drw_scm_create(drw, colors[i], 3);
 	tagscheme = ecalloc(LENGTH(tagsel), sizeof(Clr *));
 	for (i = 0; i < LENGTH(tagsel); i++)
 		tagscheme[i] = drw_scm_create(drw, tagsel[i], 2);
