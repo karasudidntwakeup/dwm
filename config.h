@@ -10,8 +10,8 @@ static const unsigned int gappov    = 15;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[] = { "Recursive Mono Casual Static:size=15", "SF Arabic:size=14","Symbols Nerd Font:size=14"};
-static const char dmenufont[]  = "Recursive Mono Casual Static:size=15";
+static const char *fonts[] = { "Comic Code:size=15", "SF Arabic:size=14","Symbols Nerd Font:size=14"};
+static const char dmenufont[]  = "Comic Code:size=15";
 static const char norm_fg[] = "#191919";
 static const char norm_bg[] = "#ffffff";
 static const char norm_border[] = "#448cf6";
