@@ -12,21 +12,36 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = { "Comic Code:size=15", "SF Arabic:size=14","Symbols Nerd Font:size=14"};
 static const char dmenufont[]  = "Comic Code:size=15";
-static const char norm_fg[] = "#191919";
-static const char norm_bg[] = "#ffffff";
-static const char norm_border[] = "#448cf6";
-static const char sel_fg[] = "#000000";
-static const char sel_bg[] = "#ffffff";
-static const char sel_border[] = "#000000";
-static const char urg_fg[] = "#f1f1f1";
-static const char urg_bg[] = "#707070";
-static const char urg_border[] = "#707070";
-static const char *colors[][3]      = {
-    /*               fg           bg         border                         */
-  [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
-  [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
-  [SchemeUrg] =  { urg_fg,      urg_bg,    urg_border },
- };
+
+/*themes/
+/* Color definitions */
+static const char col_black[]       = "#141423"; // Darkest background
+static const char col_white[]       = "#E9E9F4"; // Light foreground
+static const char col_gray[]        = "#373760"; // Dark gray accent
+static const char col_purple[]      = "#C197FD"; // Purple accent
+static const char col_yellow[]      = "#E5C697"; // Yellow accent
+static const char col_cyan[]        = "#62D6E8"; // Cyan accent
+static const char col_turquoise[]   = "#141423"; // Turquoise accent
+static const char col_pink[]        = "#FF6BCB"; // Pink accent
+static const char col_lightcyan[]   = "#8BE9FD"; // Light cyan accent
+/* Urgent state colors */
+static const char urg_fg[]    = "#141423"; // Urgent text color
+static const char urg_bg[]    = "#FF6BCB"; // Urgent background color
+static const char urg_border[] = "#FF6BCB"; // Urgent border color
+/* Status bar colors */
+static const char norm_fg[] = "#C197FD"; // Normal text color
+static const char norm_bg[] = "#141423"; // Normal background color
+static const char sel_fg[]  = "#141423"; // Selected text color
+static const char sel_bg[]  = "#141423"; // Selected background color
+static const char *colors[][3] = {
+    /*               fg         bg         border   */
+    [SchemeNorm] = { col_black, col_black, col_gray },       // Normal state (unfocused windows)
+    [SchemeSel]  = { col_white, col_turquoise, col_turquoise }, // Selected state (focused window)
+    [SchemeUrg]  = { col_pink, col_black, col_pink },        // Urgent state
+};
+
+
+
 /*sound*/
  static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
  static const char *upvol2[]   = { "/usr/bin/pactl", "set-sink-volume", "alsa_output.usb-TTGK_Technology_Co._Ltd_CX31993_384Khz_HIFI_AUDIO-00.analog-stereo", "+5%",     NULL };
@@ -40,17 +55,17 @@ static const char *colors[][3]      = {
  static const char *brightnessdown[] = { "sudo","brillo","-q", "-U", "5", NULL };
 ///tagging */
  static const char *tags[] = { " I ", " II ", " III ", " IV ", " V " };
- static const char *tagsel[][2] = {
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
-	{ "#000000", "#ffffff" },
- };
+/* Tag colors */
+static const char *tagsel[][2] = {
+
+    { "#C197FD", "#141423" }, // Selected tag 1
+    { "#E5C697", "#141423" }, // Selected tag 2
+    { "#f1f2f8", "#141423" }, // Selected tag 3
+    { "#E9E9F4", "#141423" }, // Selected tag 4
+    { "#ffffff", "#141423" }, // Selected tag 5
+
+};
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
