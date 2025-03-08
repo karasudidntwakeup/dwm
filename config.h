@@ -31,11 +31,11 @@ static const char urg_border[] = "#FF6BCB"; // Urgent border color
 /* Status bar colors */
 static const char norm_fg[] = "#C197FD"; // Normal text color
 static const char norm_bg[] = "#141423"; // Normal background color
-static const char sel_fg[]  = "#141423"; // Selected text color
+static const char sel_fg[]  = "#E5C697"; // Selected text color
 static const char sel_bg[]  = "#141423"; // Selected background color
 static const char *colors[][3] = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { col_black, col_black, col_gray },       // Normal state (unfocused windows)
+    [SchemeNorm] = { col_purple, col_black, col_gray },       // Normal state (unfocused windows)
     [SchemeSel]  = { col_white, col_turquoise, col_turquoise }, // Selected state (focused window)
     [SchemeUrg]  = { col_pink, col_black, col_pink },        // Urgent state
 };
