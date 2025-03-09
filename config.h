@@ -48,6 +48,8 @@ static const char *colors[][3] = {
  static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
  static const char *downvol2[] = { "/usr/bin/pactl", "set-sink-volume", "alsa_output.usb-TTGK_Technology_Co._Ltd_CX31993_384Khz_HIFI_AUDIO-00.analog-stereo", "-5%",     NULL };
  static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+
+
 //slock
  static const char *slockcmd[] = { "slock", NULL };
 //brightness
@@ -175,6 +177,11 @@ static const Key keys[] = {
         { 0,                            XF86XK_AudioMute, spawn, {.v = mutevol } },
         { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
         { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = upvol2   } },
+        { 0,                            XF86XK_AudioNext, spawn, SHCMD("mpc next") },
+        { 0,                            XF86XK_AudioPrev, spawn, SHCMD("mpc prev") },
+        { 0,                            XF86XK_AudioPlay, spawn, SHCMD("mpc play") },
+        { 0|ShiftMask,                            XF86XK_AudioPlay, spawn, SHCMD("mpc stop") },
+
         { 0,                            XF86XK_MonBrightnessUp,   spawn,                           {.v = brightnessup} },
         { 0,                            XF86XK_MonBrightnessDown, spawn,                           {.v = brightnessdown} },
         { MODKEY,                       XK_n,      spawn,               {.v = slockcmd } },
